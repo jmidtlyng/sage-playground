@@ -52,7 +52,7 @@ let webpackConfig = {
       },
       {
         test: /\.js$/,
-        exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
+        exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites|site-navigation))/],
         use: [
           { loader: 'cache' },
           { loader: 'buble', options: { objectAssign: 'Object.assign' } },
@@ -60,7 +60,10 @@ let webpackConfig = {
       },
       {
         test: /\.css$/,
-        include: config.paths.assets,
+        include: [
+          config.paths.assets,
+          /node_modules(?![/|\\](site-navigation))/
+        ],
         use: ExtractTextPlugin.extract({
           fallback: 'style',
           use: [

@@ -10,6 +10,14 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@murmurcreative/site-navigation@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@murmurcreative/site-navigation/-/site-navigation-2.2.2.tgz#c18a25947b4b9b1df636fdcc30be3e71a2ce7121"
+  integrity sha512-+e5ny6Je1Og0hqU0rcy+g+krcFSmEW043Z+Rd573ufe+hpBUCIwLVFdEyBiVhbCZP871ZFeB1GAAETtLvRw9OQ==
+  dependencies:
+    custom-event-polyfill "^1.0.7"
+    document-register-element "^1.11.1"
+
 "@nodelib/fs.stat@^1.1.2":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
@@ -2441,6 +2449,11 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
+custom-event-polyfill@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/custom-event-polyfill/-/custom-event-polyfill-1.0.7.tgz#9bc993ddda937c1a30ccd335614c6c58c4f87aee"
+  integrity sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==
+
 cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
@@ -2752,6 +2765,13 @@ doctrine@^2.1.0:
   integrity sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==
   dependencies:
     esutils "^2.0.2"
+
+document-register-element@^1.11.1:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/document-register-element/-/document-register-element-1.14.3.tgz#3335d4578df6a1536a34595b91cca36dd5db61d7"
+  integrity sha512-SbJTzoQXLTcYxnpdDNRZXu/gwsGSShemXpvj6Pa6ujRwJFpJ41siil4tk4y+cQXnqylS6mc2Rtxp/PkMzfkqyQ==
+  dependencies:
+    lightercollective "^0.3.0"
 
 dom-compare-temp@^0.1.0:
   version "0.1.0"
@@ -5664,6 +5684,11 @@ levn@^0.3.0, levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+lightercollective@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/lightercollective/-/lightercollective-0.3.0.tgz#1f07638642ec645d70bdb69ab2777676f35a28f0"
+  integrity sha512-RFOLSUVvwdK3xA0P8o6G7QGXLIyy1L2qv5caEI7zXN5ciaEjbAriRF182kbsoJ1S1TgvpyGcN485fMky6qxOPw==
 
 limiter@^1.0.5:
   version "1.1.5"

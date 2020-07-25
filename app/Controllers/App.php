@@ -6,6 +6,16 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+    public function headerImage()
+    {
+        return get_field('header_image');
+    }
+
+    public function headerContent()
+    {
+        return get_field('header_content');
+    }
+
     public function siteName()
     {
         return get_bloginfo('name');

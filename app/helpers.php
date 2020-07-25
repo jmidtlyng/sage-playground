@@ -136,3 +136,31 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * This little function will return the contents of already optimized assets
+ * Very useful for inlining SVG files in templates but keeping them clean.
+ *
+ * @param string i.e: "images/icon.svg".
+ */
+function get_file_contents($asset)
+{
+    $asset_url = asset_path($asset);
+
+    if (fopen($asset_url, 'r')) {
+        return file_get_contents($asset_url);
+    } else {
+        return 'Could not locate the file. Make sure it exists! Or try running "yarn build" again';
+    }
+}
+
+/**
+ * Get first paragraph from post
+ */
+function get_first_paragraph(){
+    global $post;
+    $content = wpautop(get_the_content());
+    $content = substr($content, 0, strpos($content, '</p>' ) + 4);
+    $content = strip_tags($content, '<a><strong><em>');
+    return'<p>' . $content . '</p>';
+}

@@ -44,7 +44,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'utility_navigation' => __('Utility Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
     /**
@@ -52,6 +54,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+    add_image_size('post-featured', 1280, 800, true);
 
     /**
      * Enable HTML5 markup support
@@ -89,6 +92,10 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Blog', 'sage'),
+        'id'            => 'sidebar-blog'
     ] + $config);
 });
 
@@ -128,5 +135,21 @@ add_action('after_setup_theme', function () {
      */
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
+    });
+
+    /**
+     * Create @icon() Blade directive
+     * * Usage: @icon('google-plus')
+     */
+    sage('blade')->compiler()->directive('icon', function($icon){
+        return sprintf('<span aria-hidden="true" class="fa fa-fw fa-%s"></span>', trim($icon, "'"));
+    });
+
+    /**
+     * Create @shortcode() Blade directive
+     * * Usage: @shortcode('[share title="Share this post"]')
+     */
+    sage('blade')->compiler()->directive('shortcode', function($shortcode){
+        return'<?= do_shortcode(\''. $shortcode .'\'); ?>';
     });
 });
