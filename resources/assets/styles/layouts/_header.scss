@@ -1,5 +1,10 @@
+a,
+button {
+  @apply outline-none;
+}
+
 .banner .nav {
-  @apply list-reset flex flex-wrap;
+  @apply flex flex-wrap;
 }
 
 .banner .nav a {

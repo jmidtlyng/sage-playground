@@ -4,19 +4,23 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-2 leading-tight;
+  @apply mb-2 leading-tight text-white;
 }
 
 p {
-  @apply mb-3 leading-normal;
+  @apply mb-3 leading-normal text-white;
 }
 
 a {
-  @apply text-primary no-underline border-b border-transparent;
+  @apply no-underline border-b border-transparent;
 
   transition: 0.2s ease;
 
   &:hover {
-    @apply border-primary;
+    @apply ;
   }
+}
+
+.container {
+  @apply m-auto;
 }

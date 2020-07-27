@@ -7,9 +7,9 @@
  *
  * If using `postcss-import`, use this import instead:
  *
- * @import "tailwindcss/preflight";
+ * @import "tailwindcss/base";
  */
-@tailwind preflight;
+@tailwind base;
 
 /** Import variables */
 @import "common/variables";
@@ -46,6 +46,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/pages/_home";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

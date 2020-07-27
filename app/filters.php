@@ -18,6 +18,8 @@ add_filter('body_class', function (array $classes) {
         $classes[] = 'sidebar-primary';
     }
 
+    array_push($classes, "bg-black");
+
     /** Clean up class names for custom templates */
     $classes = array_map(function ($class) {
         return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
@@ -89,3 +91,26 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter('sage/display_sidebar', function($display){
+    static $display;
+
+    isset($display) || $display = in_array(true, [
+        is_single(),
+        is_404(),
+        is_search()
+    ]);
+    return $display;
+});
+
+/**
+ * Browsersync reload on post save
+ */
+add_action('save_post', function(){
+    // WP_ENV must be set on your development environment in order for this to work
+    // This is already defined if you are using Bedrock
+    if (WP_ENV === 'development') {
+        $args = ['blocking' => false];
+        wp_remote_get('http://localhost:3000/__browser_sync__?method=reload', $args);
+    }
+});
