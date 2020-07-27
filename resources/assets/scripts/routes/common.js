@@ -1,6 +1,9 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
+  },
+  finalize() {
+    // JavaScript to be fired on all pages, after page specific JS is fired
     var $el_siteNav = $('site-navigation');
     $el_siteNav.bind('drawer-state-change', (e)=>{
       var $el_expandCollapse = $(e.detail.el.previousSibling).find('.nav-expand');
@@ -13,8 +16,5 @@ export default {
         }
       }
     });
-  },
-  finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };

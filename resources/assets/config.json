@@ -7,7 +7,7 @@
     "customizer": [
       "./scripts/customizer.js"
     ],
-    "home": [
+    "codrops": [
       "./scripts/codrops-home.js",
       "./styles/codrops-home.css"
     ]
