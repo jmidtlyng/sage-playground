@@ -6,6 +6,10 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "home": [
+      "./scripts/codrops-home.js",
+      "./styles/codrops-home.css"
     ]
   },
   "publicPath": "/wp-content/themes/sage-playground",

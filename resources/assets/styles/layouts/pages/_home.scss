@@ -1,0 +1,13 @@
+.home {
+  h1 {
+    @apply font-normal text-left my-0 text-base;
+  }
+
+  .content {
+    @apply px-6 m-0 max-w-none;
+  }
+
+  .menu_link-inner {
+    @apply text-sm;
+  }
+}
