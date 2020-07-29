@@ -48,32 +48,6 @@ a:focus {
     outline: none;
 }
 
-
-.frame {
-    text-align: center;
-    margin-bottom: 20vh;
-    font-weight: bold;
-}
-
-.frame > *:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
-.frame__title {
-    font-size: 1rem;
-    margin: 0 0 0.25rem;
-}
-
-.frame__links > *:not(:last-child),
-.frame__demos > *:not(:last-child) {
-    margin-right: 1rem;
-}
-
-.frame__demo--current,
-.frame__demo--current:hover {
-    color: var(--color-text);
-}
-
 .front-page-nav ul {
   margin-left: 2rem;
 }
@@ -211,18 +185,8 @@ a:focus {
 }
 
 @media screen and (min-width: 53em) {
-    .frame {
-        width: 100%;
-        text-align: left;
-        display: flex;
-        align-items: start;
-    }
-    .frame__demos {
-        margin-left: auto;
-    }
-    .frame > *:not(:last-child) {
-        margin: 0 2rem 0 0;
-        display: inline-block;
+    body {
+      --font-size-menu: 6vw;
     }
 
     .front-page-nav ul {
